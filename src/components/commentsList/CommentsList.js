@@ -1,4 +1,4 @@
-import CommentItem from '../commentItem/CommentItem';
+import CommentItem from '../App/commentItem/CommentItem';
 import './commentsList.scss';
 
 const CommentsList = ({comments, onDelete, onToggleProp}) => {
@@ -17,7 +17,7 @@ const CommentsList = ({comments, onDelete, onToggleProp}) => {
     })
 
     return (
-        <ul className="app-list list-group">
+        <ul>
             {elements}
         </ul>
     )

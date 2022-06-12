@@ -4,7 +4,7 @@ const CommentItem = (props) => {
 
     const {author, comment, onDelete, onToggleProp, like} = props;
 
-    let classNames = 'list-group-item d-flex justify-content-between';
+    let classNames = 'card';
 
     if (like) {
         classNames += ' like';
@@ -12,8 +12,9 @@ const CommentItem = (props) => {
 
         return (
             <li className={classNames}>
-                <span className="list-group-item-label" onClick={onToggleProp} data-toggle="like">{author}</span>
-                <input type="text" className="list-group-item-input" defaultValue={comment}/>
+                <span className="card__username" onClick={onToggleProp} data-toggle="like">{author}</span>
+                <div className="card__date">14/01/2002 a 14:50</div>
+                <input type="text" className="card__text" defaultValue={comment}/>
                 <div className='d-flex justify-content-center align-items-center'>
                     <button type="button"
                         className="btn-trash btn-sm" onClick={onDelete}>

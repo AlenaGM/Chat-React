@@ -50,16 +50,32 @@ class App extends Component {
     }))
   }
 
+  declOfNum = (n, text_arr) => {
+    n = Math.abs(n) % 100
+    var n1 = n % 10
+    if (n > 10 && n < 20) {
+        return text_arr[2]
+    }
+    if (n1 > 1 && n1 < 5) {
+        return text_arr[1]
+    }
+    if (n1 === 1) {
+        return text_arr[0]
+    }
+    return text_arr[2]
+  }
+
   render(){
     const {comments} = this.state;
 
     return (
       <div className="App">
-        <h1 className="title">Чат</h1>
+        <h1 className="comments__title">{comments.length} {this.declOfNum(comments.length, ['комментарий', 'комментария', 'комментариев'])}</h1>
         <CommentsList
           comments={comments}
           onDelete={this.deleteItem}
           onToggleProp={this.onToggleProp}/>
+        <h2 className="comments__title">Добавить комментарий</h2>
         <CommentAddForm
           onAdd={this.addItem}/>
       </div>
