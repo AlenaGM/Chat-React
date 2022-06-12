@@ -1,81 +1,66 @@
 import { Component } from 'react';
 import './commentAddForm.scss';
+import user from '../../resources/img/user.png'
 
 class CommentAddForm extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            english: '',
-            transcription: '',
-            russian: '',
-            tags:'',
-            id:''
+            author: '',
+            comment: '',
+            avatar: user
         }
     }
 
     onValueChange = (e) => {
         this.setState({
-            [e.target.name] : e.target.value.trim().toLowerCase()
+            [e.target.name] : e.target.value
         })
     }
 
     onSubmit = () => {
 
-        if (this.state.english.length < 1 || this.state.english.length < 1 || !this.state.id) return;
-        this.props.onAdd(this.state.english, this.state.transcription, this.state.russian, this.state.tags, this.state.id);
+        if (this.state.author.length < 1 || this.state.comment.length < 1) return;
+        this.props.onAdd(this.state.author, this.state.comment);
         this.setState({
-            english: '',
-            transcription: '',
-            russian: '',
-            tags:'',
-            id:''
+            author: '',
+            comment: '',
+            avatar:''
         })
     }
 
     render() {
-        const {english, russian, transcription, tags, id} = this.state;
+        const {author, avatar, comment} = this.state;
 
         return(
-            <form className="app__table table form" onSubmit = {this.onSubmit}>
-                <input
-                    type="number"
-                    className="input_edit"
-                    placeholder="ID"
-                    name="id"
-                    defaultValue={id}
-                    onChange={this.onValueChange}/>
+            <form className="form">
+                <label
+                    htmlFor="author"
+                    className="form__label"/> Имя *
                 <input
                     type="text"
-                    className="input_edit"
-                    placeholder="English"
-                    name="english"
-                    defaultValue={english}
+                    className="form__input input_author"
+                    placeholder="Имя"
+                    name="author"
+                    defaultValue={author}
                     onChange={this.onValueChange}/>
+
+                <label
+                    htmlFor="photo"
+                    className="form__label"/> Аватарка *
                 <input
-                    type="text"
-                    className="input_edit"
-                    placeholder="Transcription"
-                    name="transcription"
-                    defaultValue={transcription}
-                    onChange={this.onValueChange}/>
-                <input
-                    type="text"
-                    className="input_edit"
-                    placeholder="Russian"
-                    name="russian"
-                    defaultValue={russian}
-                    onChange={this.onValueChange}/>
-                <input
-                    type="text"
-                    className="input_edit"
-                    placeholder="Collection"
-                    name="tags"
-                    defaultValue={tags}
-                    onChange={this.onValueChange}/>
-                <div>
-                    <i className="fas fa-plus icon icon__save" onClick = {this.onSubmit}></i>
-                </div>
+                    type="file"
+                    className="file"/>
+                <div className="photoPreview">{avatar}</div>
+
+                <div className="form__label"> Комментарий:</div>
+                <textarea
+                    className="form__input"
+                    name="comment"
+                    defaultValue={comment}/>
+
+                <button type="submit" className="form__button" onSubmit = {this.onSubmit}/> Отправить
             </form>
         )
     }
