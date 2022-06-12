@@ -35,7 +35,7 @@ class CommentAddForm extends Component {
             <form className="form" onSubmit = {this.onSubmit}>
                 <label
                     htmlFor="author"
-                    className="form__label"> Имя *
+                    className="form__label"> Имя
                 </label>
                 <input
                     type="text"

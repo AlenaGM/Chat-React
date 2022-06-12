@@ -1,7 +1,28 @@
-.fa-trash {
-    color: #FB7575;
-    cursor: pointer;
-    margin-right: 20px;
+.icon {
+    position: relative;
+    top: 0;
+    &:hover{
+        transform: translateY(-3px);
+        cursor: pointer;
+    }
+    &:active {
+        top: 3px;
+        color: #BDBDBD;
+    }
+    &__delete {
+        color: #4F4F4F;
+        margin-right: 20px;
+        &:hover {
+            color: #FB7575;
+        }
+    }
+    &__like {
+        color: #4F4F4F;
+        margin-right: 5px;
+        &:hover {
+            color: rgb(83, 193, 130);
+        }
+    }
 }
 
 .fa-star {
@@ -14,7 +35,7 @@
     opacity: 0;
 }
 
-.like .fa-star {
+.icon__like .fa-star {
     opacity: 1;
     transform: translateX(0px);
 }
@@ -25,13 +46,4 @@
     font-size: 16px;
     color: rgb(83, 193, 130);
     margin-left: 10px
-}
-
-.fa-thumbs-up {
-    text-align: center;
-    line-height: 35px;
-    font-size: 16px;
-    margin-right: 0px;
-    margin-right: 5px;
-    cursor: pointer;
 }
