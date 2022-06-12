@@ -1,63 +1,58 @@
-import { Component } from 'react';
+import { useState } from 'react';
 import './commentAddForm.scss';
-//import user from '../../resources/img/user.png'
 
-class CommentAddForm extends Component {
+const CommentAddForm = (props) => {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            author: '',
-            comment: ''
-        }
-    }
+    const [state, setState] = useState('');
 
-    onValueChange = (e) => {
-        this.setState({
-            [e.target.name] : e.target.value
-        })
-    }
+    const {author, comment} = state;
 
-    onSubmit = (e) => {
+    const onValueChange = (e) => {
+        e.stopPropagation();
+        setState({
+            ...state,
+            [e.target.dataset.name]: e.target.value,
+        });
+    };
+
+    const onSubmit = (e) => {
         e.preventDefault();
-        if (this.state.author.length < 3 || !this.state.comment) return;
-        this.props.onAdd(this.state.author, this.state.comment);
-        this.setState({
+        if (!author || !comment) return;
+        props.onAdd(author, comment);
+        setState({
             author: '',
             comment: '',
         })
     }
 
-    render() {
-        const {author, comment} = this.state;
+    return(
+        <form className="form" onSubmit = {onSubmit}>
+            <label
+                htmlFor="author"
+                className="form__label"> Имя
+            </label>
+            <input
+                type="text"
+                className="form__input"
+                placeholder="Имя"
+                data-name="author"
+                defaultValue={author}
+                onChange={onValueChange}/>
 
-        return(
-            <form className="form" onSubmit = {this.onSubmit}>
-                <label
-                    htmlFor="author"
-                    className="form__label"> Имя
-                </label>
-                <input
-                    type="text"
-                    className="form__input"
-                    placeholder="Имя"
-                    name="author"
-                    defaultValue={author}
-                    onChange={this.onValueChange}/>
+            <div className="form__label"> Комментарий:</div>
+            <textarea
+                className="form__input"
+                placeholder="Комментарий"
+                data-name="comment"
+                defaultValue={comment}
+                onChange={onValueChange}/>
 
-                <div className="form__label"> Комментарий:</div>
-                <textarea
-                    className="form__input"
-                    placeholder="Комментарий"
-                    name="comment"
-                    defaultValue={comment}
-                    onChange={this.onValueChange}/>
-
-                <button type="submit" className="form__button">Добавить</button>
-            </form>
-        )
-    }
+            <button type="submit" className="form__button">Добавить</button>
+        </form>
+    )
 }
+
+export default CommentAddForm;
 
 //                 <label
 //htmlFor="photo"
@@ -70,4 +65,3 @@ class CommentAddForm extends Component {
 //<img src={avatar} alt="avatar" className="comment__image"></img>
 //</div>
 
-export default CommentAddForm;

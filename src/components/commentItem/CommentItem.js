@@ -1,8 +1,13 @@
+import { useState } from 'react';
+
 import './commentItem.scss';
 
 const CommentItem = (props) => {
 
-    const {author, comment, onDelete, onToggleProp, like} = props;
+    const [state, setState] = useState(props);
+
+    const {author, comment} = state;
+    const {onDelete, onToggleProp, like} = props;
 
     let classNames = 'comment';
 
