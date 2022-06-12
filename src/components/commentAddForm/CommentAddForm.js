@@ -39,7 +39,7 @@ class CommentAddForm extends Component {
                 </label>
                 <input
                     type="text"
-                    className="form__input input_author"
+                    className="form__input"
                     placeholder="Имя"
                     name="author"
                     defaultValue={author}
@@ -67,7 +67,7 @@ class CommentAddForm extends Component {
 //type="file"
 //className="file"/>
 //<div className="photoPreview">
-//<img src={avatar} alt="avatar" className="card__image"></img>
+//<img src={avatar} alt="avatar" className="comment__image"></img>
 //</div>
 
 export default CommentAddForm;

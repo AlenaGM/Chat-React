@@ -2,17 +2,13 @@
 
 
 body {
-
-    min-height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
+    min-width: 300px;
 }
 
 #root {
     min-height: 100vh;
 }
+
 
 * {
     font-family: 'Inter', sans-serif;
@@ -22,6 +18,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #484C56;
 }
 
 ul,

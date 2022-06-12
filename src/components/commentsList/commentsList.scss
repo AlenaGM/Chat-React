@@ -1,17 +1,16 @@
-/* - Карточки -------------------------------------- */
-.card {
+.comment {
     max-width: 800px;
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 20px 10px;
+    padding: 20px 0px;
 }
 
-.card:not(:last-of-type), .comments__title {
+.comment:not(:last-of-type), .app__title {
     border-bottom: solid 1px rgb(163, 175, 187);
 }
 
-.comments__title {
+.app__title {
     color: rgb(76, 144, 235);
     font-size: 1.25rem;
     font-weight: 600;
@@ -19,7 +18,7 @@
     padding: 20px 0px 5px 0px;
 }
 
-.card__image {
+.comment__image {
     top: 0;
     left: 0;
     border-radius: 50%;
@@ -28,13 +27,13 @@
     align-self: start;
 }
 
-.card__main {
+.comment__main {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.card__username {
+.comment__username {
     margin: 0px;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -43,7 +42,7 @@
     text-align: left;
 }
 
-.card__date {
+.comment__date {
     font-family: 'Inter', sans-serif;
     color: #727272;
     font-size: 14px;
@@ -52,7 +51,7 @@
     text-align: left;
 }
 
-.card__text {
+.comment__text {
     display: flex;
     overflow-wrap: anywhere;
     font-family: 'Inter', sans-serif;

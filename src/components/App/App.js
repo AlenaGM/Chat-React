@@ -69,13 +69,13 @@ class App extends Component {
     const {comments} = this.state;
 
     return (
-      <div className="App">
-        <h1 className="comments__title">{comments.length} {this.declOfNum(comments.length, ['комментарий', 'комментария', 'комментариев'])}</h1>
+      <div className="app">
+        <h1 className="app__title">{comments.length} {this.declOfNum(comments.length, ['комментарий', 'комментария', 'комментариев'])}</h1>
         <CommentsList
           comments={comments}
           onDelete={this.deleteItem}
           onToggleProp={this.onToggleProp}/>
-        <h2 className="comments__title">Добавить комментарий</h2>
+        <h2 className="app__title">Добавить комментарий</h2>
         <CommentAddForm
           onAdd={this.addItem}/>
       </div>
