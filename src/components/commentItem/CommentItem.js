@@ -1,8 +1,8 @@
-import './commentItem.css';
+import './commentItem.scss';
 
 const CommentItem = (props) => {
 
-    const {author, comment, like} = props;
+    const {author, comment, onDelete, onToggleProp, like} = props;
 
     let classNames = 'list-group-item d-flex justify-content-between';
 

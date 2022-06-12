@@ -1,7 +1,7 @@
 import { Component } from 'react';
 
-import CommentAddForm from '../commentAddForm/CommentAddForm';
 import CommentsList from '../commentsList/CommentsList';
+import CommentAddForm from '../commentAddForm/CommentAddForm';
 import comments from "../../resources/data/comments.json";
 
 import './App.scss';
@@ -13,6 +13,7 @@ class App extends Component {
     this.state = {
       comments,
     }
+    this.maxId = 4;
   }
 
   deleteItem = (id) => {
@@ -26,14 +27,27 @@ class App extends Component {
   addItem = (author, comment) => {
     const newItem = {
       author,
-      comment
+      comment,
+      like: false,
+      id: this.maxId++
     }
     this.setState(({comments}) => {
       const newArr = [...comments, newItem];
       return {
-        data: newArr
+        comments: newArr
       }
     });
+  }
+
+  onToggleProp = (id, prop) => {
+    this.setState(({comments}) => ({
+        comments: comments.map(item => {
+            if (item.id === id) {
+                return {...item, [prop]: !item[prop]}
+            }
+            return item;
+        })
+    }))
   }
 
   render(){

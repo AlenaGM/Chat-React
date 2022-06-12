@@ -1,15 +1,14 @@
 import { Component } from 'react';
 import './commentAddForm.scss';
-import user from '../../resources/img/user.png'
+//import user from '../../resources/img/user.png'
 
 class CommentAddForm extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            author: 'Аноним',
-            comment: '',
-            avatar: user
+            author: '',
+            comment: ''
         }
     }
 
@@ -19,22 +18,21 @@ class CommentAddForm extends Component {
         })
     }
 
-    onSubmit = () => {
-
-        if (this.state.author.length < 1 || this.state.comment.length < 1) return;
+    onSubmit = (e) => {
+        e.preventDefault();
+        if (this.state.author.length < 3 || !this.state.comment) return;
         this.props.onAdd(this.state.author, this.state.comment);
         this.setState({
             author: '',
             comment: '',
-            avatar:''
         })
     }
 
     render() {
-        const {author, avatar, comment} = this.state;
+        const {author, comment} = this.state;
 
         return(
-            <form className="form">
+            <form className="form" onSubmit = {this.onSubmit}>
                 <label
                     htmlFor="author"
                     className="form__label"> Имя *
@@ -47,27 +45,29 @@ class CommentAddForm extends Component {
                     defaultValue={author}
                     onChange={this.onValueChange}/>
 
-                <label
-                    htmlFor="photo"
-                    className="form__label"> Аватарка *
-                </label>
-                <input
-                    type="file"
-                    className="file"/>
-                <div className="photoPreview">
-                    <img src={avatar} alt="avatar" className="card__image"></img>
-                </div>
-
                 <div className="form__label"> Комментарий:</div>
                 <textarea
                     className="form__input"
+                    placeholder="Комментарий"
                     name="comment"
-                    defaultValue={comment}/>
+                    defaultValue={comment}
+                    onChange={this.onValueChange}/>
 
-                <input type="submit" className="form__button" defaultValue="Отправит" onSubmit = {this.onSubmit}/>
+                <button type="submit" className="form__button">Добавить</button>
             </form>
         )
     }
 }
+
+//                 <label
+//htmlFor="photo"
+//className="form__label"> Аватарка *
+//</label>
+//<input
+//type="file"
+//className="file"/>
+//<div className="photoPreview">
+//<img src={avatar} alt="avatar" className="card__image"></img>
+//</div>
 
 export default CommentAddForm;

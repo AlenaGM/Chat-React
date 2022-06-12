@@ -1,7 +1,7 @@
 import CommentItem from '../commentItem/CommentItem';
 import './commentsList.scss';
 
-const CommentsList = ({comments, onDelete}) => {
+const CommentsList = ({comments, onDelete, onToggleProp}) => {
 
     const elements = comments.map(item => {
 
@@ -11,7 +11,8 @@ const CommentsList = ({comments, onDelete}) => {
         <CommentItem
             key={id}
             {...itemProps}
-            onDelete={()=> onDelete(id)}/>
+            onDelete={()=> onDelete(id)}
+            onToggleProp={(e) => onToggleProp(id, e.currentTarget.getAttribute('data-toggle'))}/>
         )
     })
 
