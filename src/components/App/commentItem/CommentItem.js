@@ -12,7 +12,7 @@ const CommentItem = (props) => {
 
         return (
             <li className={classNames}>
-                <span className="card__username" onClick={onToggleProp} data-toggle="like">{author}</span>
+                <span className="card__username" onClick={onToggleProp} data-toggle="like">{author}<i class='fa-solid fa-user fa-9x'></i></span>
                 <div className="card__date">14/01/2002 a 14:50</div>
                 <input type="text" className="card__text" defaultValue={comment}/>
                 <div className='d-flex justify-content-center align-items-center'>
