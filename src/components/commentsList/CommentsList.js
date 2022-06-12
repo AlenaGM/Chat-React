@@ -1,4 +1,4 @@
-import CommentItem from '../App/commentItem/CommentItem';
+import CommentItem from '../commentItem/CommentItem';
 import './commentsList.scss';
 
 const CommentsList = ({comments, onDelete, onToggleProp}) => {

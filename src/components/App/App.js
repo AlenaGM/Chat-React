@@ -13,7 +13,7 @@ class App extends Component {
     this.state = {
       comments,
     }
-    this.maxId = 4;
+    this.maxId = 2;
   }
 
   deleteItem = (id) => {
