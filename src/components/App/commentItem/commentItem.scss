@@ -1,26 +1,14 @@
-
-
-.list-group-item button {
-    width: 35px;
-    height: 35px;
-    margin: 3px;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-}
-
-
-.list-group-item .btn-trash {
+.fa-trash {
     color: #FB7575;
+    cursor: pointer;
+    margin-right: 20px;
 }
 
 .fa-star {
-    width: 35px;
-    height: 35px;
     text-align: center;
     line-height: 35px;
     font-size: 16px;
-    color: #FFE16A;
+    color: #FFB069;
     transition: 0.3s all;
     transform: translateX(30px);
     opacity: 0;
@@ -32,10 +20,18 @@
 }
 
 .fa-user {
-    width: 35px;
-    height: 35px;
     text-align: center;
     line-height: 35px;
     font-size: 16px;
-    color: #ecb62f;
+    color: rgb(83, 193, 130);
+    margin-left: 10px
+}
+
+.fa-thumbs-up {
+    text-align: center;
+    line-height: 35px;
+    font-size: 16px;
+    margin-right: 0px;
+    margin-right: 5px;
+    cursor: pointer;
 }
