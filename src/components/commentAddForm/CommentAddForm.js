@@ -18,6 +18,7 @@ const CommentAddForm = (props) => {
     const onSubmit = (e) => {
         e.preventDefault();
         if (!author || !comment) return;
+
         props.onAdd(author, comment);
         setState({
             author: '',

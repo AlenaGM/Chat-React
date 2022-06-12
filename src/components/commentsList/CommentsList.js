@@ -14,7 +14,7 @@ const CommentsList = ({comments, onDelete, onToggleProp}) => {
             onDelete={()=> onDelete(id)}
             onToggleProp={(e) => onToggleProp(id, e.currentTarget.getAttribute('data-toggle'))}/>
         )
-    })
+    }).reverse();
 
     return (
         <ul>

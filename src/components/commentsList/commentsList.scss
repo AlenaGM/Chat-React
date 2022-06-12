@@ -6,6 +6,10 @@
     padding: 20px 0px;
 }
 
+.comment:first-of-type .comment__text, .comment:first-of-type {
+    background-color: #fff8f9;
+}
+
 .comment:not(:last-of-type), .app__title {
     border-bottom: solid 1px rgb(163, 175, 187);
 }
