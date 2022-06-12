@@ -1,14 +1,25 @@
+import CommentItem from '../commentItem/CommentItem';
 import './commentsList.scss';
 
-const CommentsList = () => {
+const CommentsList = ({comments, onDelete}) => {
+
+    const elements = comments.map(item => {
+
+        const {id, ...itemProps} = item;
+
+        return (
+        <CommentItem
+            key={id}
+            {...itemProps}
+            onDelete={()=> onDelete(id)}/>
+        )
+    })
+
     return (
-        <div>
-            <div>Комментарий 1</div>
-            <div>Комментарий 2</div>
-            <div>Комментарий 3</div>
-            <div>Комментарий 4</div>
-        </div>
+        <ul className="app-list list-group">
+            {elements}
+        </ul>
     )
 }
 
-export default CommentsList
+export default CommentsList;

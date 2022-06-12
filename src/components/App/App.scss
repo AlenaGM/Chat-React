@@ -1,5 +1,16 @@
 .App {
   text-align: center;
+  max-width: 600px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 2px 1px #6B005B33;
+  margin: 0px auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 .App-logo {
@@ -35,4 +46,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.form {
+  border-top: solid 1px rgb(163, 175, 187);
+  margin-bottom: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form * {
+  outline: none;
+}
+
+.form__label, label {
+  margin-top: 14px;
+  margin-bottom: 2px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  text-align: left;
+}
+
+.form__button {
+  width: 100px;
+  height: 30px;
+  margin-top: 20px;
+  border-radius: 8px;
 }

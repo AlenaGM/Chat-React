@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 @import './variables';
 @import './button';
 
 body {
-    min-width: 300px;
+
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
 }
 
 #root {
@@ -11,11 +16,13 @@ body {
 }
 
 * {
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+    line-height: 140%;
+    color: #484C56;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #4F4F4F;
 }
 
 ul,
@@ -48,6 +55,9 @@ a {
 p {
     margin: 0;
     padding: 0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
 }
 
 input::-webkit-outer-spin-button,
@@ -55,3 +65,4 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+

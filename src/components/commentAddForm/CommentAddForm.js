@@ -7,7 +7,7 @@ class CommentAddForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            author: '',
+            author: 'Аноним',
             comment: '',
             avatar: user
         }
@@ -37,7 +37,8 @@ class CommentAddForm extends Component {
             <form className="form">
                 <label
                     htmlFor="author"
-                    className="form__label"/> Имя *
+                    className="form__label"> Имя *
+                </label>
                 <input
                     type="text"
                     className="form__input input_author"
@@ -48,11 +49,14 @@ class CommentAddForm extends Component {
 
                 <label
                     htmlFor="photo"
-                    className="form__label"/> Аватарка *
+                    className="form__label"> Аватарка *
+                </label>
                 <input
                     type="file"
                     className="file"/>
-                <div className="photoPreview">{avatar}</div>
+                <div className="photoPreview">
+                    <img src={avatar} alt="avatar" className="card__image"></img>
+                </div>
 
                 <div className="form__label"> Комментарий:</div>
                 <textarea
@@ -60,7 +64,7 @@ class CommentAddForm extends Component {
                     name="comment"
                     defaultValue={comment}/>
 
-                <button type="submit" className="form__button" onSubmit = {this.onSubmit}/> Отправить
+                <input type="submit" className="form__button" defaultValue="Отправит" onSubmit = {this.onSubmit}/>
             </form>
         )
     }
