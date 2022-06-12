@@ -16,12 +16,12 @@ const CommentItem = (props) => {
 
         return (
             <li className={classNames}>
-                <span className="comment__username">{author}<i class='fa-solid fa-user fa-9x'></i></span>
-                <div className="comment__date">14/01/2002 a 14:50</div>
+                <span className="comment__username">{author}<i className='fa-solid fa-user fa-9x'></i></span>
+                <div className="comment__date">13.06 в 15:22</div>
                 <input type="text" className="comment__text" defaultValue={comment}/>
                 <div>
                     <i className="fas fa-trash icon icon__delete" onClick={onDelete}></i>
-                    <i class="fa-regular fa-thumbs-up icon icon__like" onClick={onToggleProp} data-toggle="like"></i>
+                    <i className="fa-regular fa-thumbs-up icon icon__like" onClick={onToggleProp} data-toggle="like"></i>
                     <i className="fas fa-star"></i>
                 </div>
             </li>
@@ -29,3 +29,7 @@ const CommentItem = (props) => {
     }
 
 export default CommentItem;
+
+    //let date = new Date();
+
+    //date = `${new Intl.DateTimeFormat('ru-RU', {day:'2-digit', month:'2-digit'}).format(date)} в ${new Intl.DateTimeFormat('ru-RU', {hour:'2-digit', minute:'2-digit'}).format(date)}`;
