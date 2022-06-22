@@ -37,7 +37,7 @@ const CommentAddForm = (props) => {
                 className="form__input"
                 placeholder="Имя"
                 data-name="author"
-                defaultValue={author}
+                value={state.author}
                 onChange={onValueChange}/>
 
             <div className="form__label"> Комментарий:</div>
@@ -45,7 +45,7 @@ const CommentAddForm = (props) => {
                 className="form__input"
                 placeholder="Комментарий"
                 data-name="comment"
-                defaultValue={comment}
+                value={state.comment}
                 onChange={onValueChange}/>
 
             <button type="submit" className="form__button">Добавить</button>
