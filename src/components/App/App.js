@@ -24,6 +24,22 @@ class App extends Component {
     })
   }
 
+// вариант с реверсом
+//  addItem = (author, comment) => {
+//    const newItem = {
+//      author,
+//      comment,
+//      like: false,
+//      id: this.maxId++
+//    }
+//    this.setState(({comments}) => {
+//      const newArr = [...comments, newItem];
+//      return {
+//        comments: newArr
+//      }
+//    });
+//  }
+
   addItem = (author, comment) => {
     const newItem = {
       author,
@@ -32,12 +48,15 @@ class App extends Component {
       id: this.maxId++
     }
     this.setState(({comments}) => {
-      const newArr = [...comments, newItem];
+      const newArr = [...comments];
+      newArr.unshift(newItem);
+
       return {
         comments: newArr
       }
     });
   }
+
 
   onToggleProp = (id, prop) => {
     this.setState(({comments}) => ({

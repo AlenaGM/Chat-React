@@ -1,68 +1,65 @@
-import { useState } from 'react';
+import { Component } from 'react';
 import './commentAddForm.scss';
 
-const CommentAddForm = (props) => {
+class CommentAddForm extends Component {
 
-    const [state, setState] = useState('');
+    constructor(props) {
+        super(props);
+        this.state = {
+            author: '',
+            comment: ''
+        }
+    }
 
-    const {author, comment} = state;
-
-    const onValueChange = (e) => {
+    onValueChange = (e) => {
         e.stopPropagation();
-        setState({
-            ...state,
+        this.setState({
+            ...this.state,
             [e.target.dataset.name]: e.target.value,
         });
     };
 
-    const onSubmit = (e) => {
+    onSubmit = (e) => {
         e.preventDefault();
-        if (!author || !comment) return;
+        if (!this.state.author || !this.state.comment) return;
 
-        props.onAdd(author, comment);
-        setState({
+        this.props.onAdd(this.state.author, this.state.comment);
+        this.setState({
             author: '',
             comment: '',
         })
     }
 
-    return(
-        <form className="form" onSubmit = {onSubmit}>
-            <label
-                htmlFor="author"
-                className="form__label"> Имя
-            </label>
-            <input
-                type="text"
-                className="form__input"
-                placeholder="Имя"
-                data-name="author"
-                value={state.author}
-                onChange={onValueChange}/>
+    render () {
+        const {author, comment} = this.state;
 
-            <div className="form__label"> Комментарий:</div>
-            <textarea
-                className="form__input"
-                placeholder="Комментарий"
-                data-name="comment"
-                value={state.comment}
-                onChange={onValueChange}/>
+        return(
+            <form className="form" onSubmit = {this.onSubmit}>
+                <label
+                    htmlFor="author"
+                    className="form__label"> Имя
+                </label>
+                <input
+                    type="text"
+                    className="form__input"
+                    placeholder="Имя"
+                    data-name="author"
+                    value={author}
+                    onChange={this.onValueChange}/>
 
-            <button type="submit" className="form__button">Добавить</button>
-        </form>
-    )
+                <div className="form__label"> Комментарий:</div>
+                <textarea
+                    className="form__input"
+                    placeholder="Комментарий"
+                    data-name="comment"
+                    value={comment}
+                    onChange={this.onValueChange}/>
+
+                <button type="submit" className="form__button">Добавить</button>
+            </form>
+        )
+    }
 }
 
 export default CommentAddForm;
-
-//                 <label
-//htmlFor="photo"
-//className="form__label"> Аватарка *
-//</label>
-//<input
-//type="file"
-//className="file"/>
-//<div className="photoPreview">
-//<img src={avatar} alt="avatar" className="comment__image"></img>
-//</div>
 
