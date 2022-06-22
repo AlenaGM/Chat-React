@@ -57,7 +57,6 @@ class App extends Component {
     });
   }
 
-
   onToggleProp = (id, prop) => {
     this.setState(({comments}) => ({
         comments: comments.map(item => {
