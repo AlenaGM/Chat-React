@@ -40,9 +40,10 @@ class App extends Component {
 //    });
 //  }
 
-  addItem = (author, comment) => {
+  addItem = (author, date, comment) => {
     const newItem = {
       author,
+      date,
       comment,
       like: false,
       id: this.maxId++

@@ -7,6 +7,7 @@ class CommentAddForm extends Component {
         super(props);
         this.state = {
             author: '',
+            date: '',
             comment: ''
         }
     }
@@ -15,18 +16,26 @@ class CommentAddForm extends Component {
         e.stopPropagation();
         this.setState({
             ...this.state,
-            [e.target.dataset.name]: e.target.value,
+            [e.target.dataset.name]: e.target.value
         });
+        this.getDate();
+    };
+
+
+    getDate = () => {
+        let date = new Date().toLocaleString();
+        this.setState({date});
     };
 
     onSubmit = (e) => {
         e.preventDefault();
         if (!this.state.author || !this.state.comment) return;
 
-        this.props.onAdd(this.state.author, this.state.comment);
+        this.props.onAdd(this.state.author, this.state.date, this.state.comment);
+
         this.setState({
             author: '',
-            comment: '',
+            comment: ''
         })
     }
 
