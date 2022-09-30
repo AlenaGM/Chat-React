@@ -32,7 +32,7 @@ The following commands install and run the development version:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/AlenaGM/biblio.git)
+$ git clone https://github.com/AlenaGM/chat-react.git)
 # Go into the repository
 $ cd flashcards-app
 # Install dependencies
@@ -47,7 +47,7 @@ Contributions are always welcome! If you want to contribute:
 
 ```bash
 # Clone repo and create a new branch:
-$ git checkout https://github.com/AlenaGM/biblio -b name_for_new_branch
+$ git checkout https://github.com/AlenaGM/chat-react -b name_for_new_branch
 #  Make changes
 #  Submit Pull Request with description of changes
 ```
@@ -55,19 +55,8 @@ $ git checkout https://github.com/AlenaGM/biblio -b name_for_new_branch
 ##
 
   
-  \* _Project to practice basic React concepts_ 
+\* _Week 32 Training Project in [ITGirlSchool]_ 
   
 
-   [Biblio]: <https://alenagm.github.io/biblio/>
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   [ITGirlSchool]: <https://itgirlschool.com/en>
+   [Chat-react]: <https://alenagm.github.io/chat-react/>
