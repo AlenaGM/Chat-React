@@ -48,11 +48,11 @@ class CommentAddForm extends Component {
           Vous apparaîtrez en tant que :
         </label>
         <input
-          maxLength={50}
           type="text"
           className="form__input"
           placeholder="Nom"
           data-name="author"
+          maxLength={35}
           value={author}
           onChange={this.onValueChange}
         />
@@ -62,7 +62,15 @@ class CommentAddForm extends Component {
           className="form__input"
           placeholder="Commentaire"
           data-name="comment"
+          maxLength={1500}
           value={comment}
+          onChange={this.onValueChange}
+        />
+
+        <input
+          type="text"
+          className="form__counter "
+          value={comment.length + "/1500 "}
           onChange={this.onValueChange}
         />
 
