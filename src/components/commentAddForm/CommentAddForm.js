@@ -62,7 +62,7 @@ class CommentAddForm extends Component {
           className="form__input"
           placeholder="Commentaire"
           data-name="comment"
-          maxLength={1500}
+          maxLength={1200}
           value={comment}
           onChange={this.onValueChange}
         />
@@ -70,7 +70,7 @@ class CommentAddForm extends Component {
         <input
           type="text"
           className="form__counter "
-          value={comment.length + "/1500 "}
+          value={comment.length + "/1200 "}
           onChange={this.onValueChange}
         />
 
