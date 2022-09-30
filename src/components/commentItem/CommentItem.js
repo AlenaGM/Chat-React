@@ -20,7 +20,7 @@ const CommentItem = (props) => {
         <i className="fa-solid fa-user fa-9x"></i>
       </span>
       <div className="comment__date">{date}</div>
-      <input type="text" className="comment__text" defaultValue={comment} />
+      <div className="comment__text">{comment}</div>
       <div>
         <i className="fas fa-trash icon icon__delete" onClick={onDelete}></i>
         <i

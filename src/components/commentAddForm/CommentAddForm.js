@@ -48,6 +48,7 @@ class CommentAddForm extends Component {
           Vous apparaîtrez en tant que :
         </label>
         <input
+          maxLength={50}
           type="text"
           className="form__input"
           placeholder="Nom"
