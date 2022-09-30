@@ -1,4 +1,4 @@
-# Chat-react - Reading List Organizer :chat:
+# Chat-react - Reading List Organizer 💬
 
 _CRUD Application built with React that serves to organize reading list._<br><br>
 Project to learn the basics of React.
@@ -16,7 +16,7 @@ Project to learn the basics of React.
 
 ## Result
 
-<img width="45%" alt="webpage capture" src="../main/captureweb.jpeg">
+<img width="50%" alt="webpage capture" src="../main/captureweb.jpeg">
 
 
 ## Tech stack
@@ -53,8 +53,7 @@ $ git checkout https://github.com/AlenaGM/chat-react -b name_for_new_branch
 ```
 
 ##
-
-  
+<br><br>
 \* _Week 32 Training Project in [ITGirlSchool]_ 
   
 
