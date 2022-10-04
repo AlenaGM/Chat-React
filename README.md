@@ -1,6 +1,6 @@
 # Chat-react - Reading List Organizer
 
-React Chat Application 💬
+React Chat Application 💬💬
 
 ## Demo
 
