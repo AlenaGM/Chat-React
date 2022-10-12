@@ -1,4 +1,4 @@
-# Chat-react - Reading List Organizer
+# Chat-react
 
 React Chat/Comment Form Application 💬💬
 
