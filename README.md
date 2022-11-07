@@ -1,6 +1,6 @@
 # Chat-react
 
-React Chat/Comment Form Application 💬💬
+React Chat/Comment Form Application 💬
 
 ## Demo
 
