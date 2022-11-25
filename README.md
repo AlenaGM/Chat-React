@@ -1,14 +1,6 @@
-# Chat-react - Reading List Organizer 💬
+# Comments Form
 
-_CRUD Application built with React that serves to organize reading list._<br><br>
-Project to learn the basics of React.
-
-## Features
-
-&nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; Book-search and book-filter options;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; Possibility to edit, add and delete books in a list;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; Reading-progress status;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; Add-to-favourites option.<br>
+React Comments Form component 💬
 
 ## Demo
 
