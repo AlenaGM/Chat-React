@@ -1,6 +1,6 @@
-# Chat Comments Form
+# Comments Form
 
-React Chat/Comments Form component 💬
+React Comments Form component 💬
 
 ## Demo
 
