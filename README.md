@@ -26,7 +26,7 @@ The following commands install and run the development version:
 # Clone this repository
 $ git clone https://github.com/AlenaGM/react-comments-form.git
 # Go into the repository
-$ cd flashcards-app
+$ cd react-comments-form
 # Install dependencies
 $ npm install
 # Run the app
