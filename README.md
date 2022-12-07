@@ -24,7 +24,7 @@ The following commands install and run the development version:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/AlenaGM/react-comments-form.git)
+$ git clone https://github.com/AlenaGM/react-comments-form.git
 # Go into the repository
 $ cd flashcards-app
 # Install dependencies
