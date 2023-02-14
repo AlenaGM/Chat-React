@@ -1,10 +1,10 @@
-# Comments Form
+# Comment Form
 
-React Comments Form component 💬
+React Comment-Form component 💬
 
 ## Demo
 
-[React Comments Form]
+[React Comment-Form]
 
 ## Result
 
@@ -50,4 +50,4 @@ $ git checkout https://github.com/AlenaGM/react-comments-form -b name_for_new_br
   
 
    [ITGirlSchool]: <https://itgirlschool.com/en>
-   [React Comments Form]: <https://alenagm.github.io/react-comments-form/>
+   [React Comment-Form]: <https://alenagm.github.io/react-comments-form/>
