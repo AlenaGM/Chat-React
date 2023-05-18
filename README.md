@@ -1,6 +1,6 @@
 # Comment Form
 
-React Comment-Form component 💬
+React Comment-Form component 💬.
 
 ## Demo
 
