@@ -2,6 +2,19 @@
   "name": "chat-react",
   "version": "0.1.0",
   "private": true,
+  "author": "alena",
+  "description": "React comment form component",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "react component",
+    "comment component",
+    "add comments component"
+  ],
+  "homepage": "https://AlenaGM.github.io/react-comments-form/",
+  "bugs": {
+    "url": "https://github.com/AlenaGM/alina-coach/issues"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -13,7 +26,6 @@
     "sass": "^1.52.3",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://AlenaGM.github.io/react-comments-form/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
