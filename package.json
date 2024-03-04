@@ -13,7 +13,7 @@
   ],
   "homepage": "https://AlenaGM.github.io/react-comments-form/",
   "bugs": {
-    "url": "https://github.com/AlenaGM/alina-coach/issues"
+    "url": "https://github.com/AlenaGM/react-comments-form/issues"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
