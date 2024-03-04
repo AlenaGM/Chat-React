@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-comments-form/static/css/main.a523f5ec.css",
-    "main.js": "/react-comments-form/static/js/main.8dc5200c.js",
+    "main.js": "/react-comments-form/static/js/main.632e2070.js",
     "index.html": "/react-comments-form/index.html",
     "main.a523f5ec.css.map": "/react-comments-form/static/css/main.a523f5ec.css.map",
-    "main.8dc5200c.js.map": "/react-comments-form/static/js/main.8dc5200c.js.map"
+    "main.632e2070.js.map": "/react-comments-form/static/js/main.632e2070.js.map"
   },
   "entrypoints": [
     "static/css/main.a523f5ec.css",
-    "static/js/main.8dc5200c.js"
+    "static/js/main.632e2070.js"
   ]
 }
