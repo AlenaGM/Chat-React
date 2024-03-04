@@ -1,72 +1,67 @@
+@import "./../../styles/variables.scss";
+
+.app__title {
+  color: $text-title;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  border-bottom: solid 1px $table-border;
+  padding: 20px 0px 5px 0px;
+}
+
 .comment {
   max-width: 800px;
   position: relative;
   display: flex;
   flex-direction: column;
   padding: 12px;
-}
-
-.comment:first-of-type .comment__text,
-.comment:first-of-type {
-  background-color: #fff8f9;
-}
-
-.comment:not(:last-of-type),
-.app__title {
-  border-bottom: solid 1px rgb(163, 175, 187);
-}
-
-.app__title {
-  color: rgb(76, 144, 235);
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.4;
-  padding: 20px 0px 5px 0px;
-}
-
-.comment__image {
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  align-self: start;
-}
-
-.comment__main {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.comment__username {
-  margin: 0px;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  text-align: left;
-}
-
-.comment__date {
-  font-family: "Inter", sans-serif;
-  color: #727272;
-  font-size: 14px;
-  font-style: italic;
-  font-weight: 500;
-  text-align: left;
-}
-
-.comment__text {
-  display: flex;
-  overflow-wrap: anywhere;
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  text-align: left;
-  line-height: 140%;
-  border: 0;
-  padding: 8px 0px;
-  height: max-content;
+  &:first-of-type .comment__text,
+  &:first-of-type {
+    background-color: $comment-bg;
+  }
+  &:not(:last-of-type) {
+    border-bottom: solid 1px $table-border;
+  }
+  &__image {
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    align-self: start;
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  &__username {
+    margin: 0px;
+    font-family: $font-text;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    text-align: left;
+  }
+  &__date {
+    font-family: $font-text;
+    color: $text-second;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+    text-align: left;
+  }
+  &__text {
+    display: flex;
+    overflow-wrap: anywhere;
+    font-family: $font-text;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    line-height: 140%;
+    border: 0;
+    padding: 8px 0px;
+    height: max-content;
+  }
 }

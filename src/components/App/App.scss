@@ -1,3 +1,5 @@
+@import "./../../styles/variables.scss";
+
 .app {
   display: flex;
   flex-direction: column;
@@ -6,9 +8,13 @@
   max-width: 800px;
   margin: 0px auto;
   padding: 16px;
-  background-color: #FFFFFF;
+  background-color: $table-bg;
   align-items: stretch;
   justify-content: center;
+}
+
+.form * {
+  outline: none;
 }
 
 .form {
@@ -16,41 +22,35 @@
   padding: 10px 0px;
   display: flex;
   flex-direction: column;
-}
-
-.form * {
-  outline: none;
-}
-
-.form__label {
-  margin-top: 14px;
-  margin-bottom: 2px;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  text-align: left;
-}
-
-.form__button {
-  font-size: 16px;
-  text-align: center;
-  color: #FFFFFF;
-  width: 110px;
-  height: 44px;
-  background-color: rgb(76, 144, 235);
-  border: none;
-  margin-top: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 0 #23262f3b;
-  position: relative;
-  top: 0;
-  cursor: pointer;
-  &:hover {
-    background-color: rgb(132, 177, 236);
-    transform: translateY(-3px);
+  &__label {
+    margin-top: 14px;
+    margin-bottom: 2px;
+    font-family: $font-text;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    text-align: left;
   }
-  &:focus {
-    outline: none;
+  &__button {
+    font-size: 16px;
+    text-align: center;
+    color: $table-bg;
+    width: 110px;
+    height: 44px;
+    background-color: $text-title;
+    border: none;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 0 #23262f3b;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    &:hover {
+      background-color: $text-title-hover;
+      transform: translateY(-3px);
+    }
+    &:focus {
+      outline: none;
+    }
   }
 }

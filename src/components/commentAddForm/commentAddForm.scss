@@ -1,16 +1,19 @@
-.form__input {
-  padding: 10px;
-  border: solid 1px rgb(163, 175, 187);
-}
+@import "./../../styles/variables.scss";
 
-.form__counter {
-  font-family: "Inter", sans-serif;
-  color: #727272;
-  font-size: 14px;
-  font-style: italic;
-  font-weight: 500;
-  text-align: right;
-  border: none;
+.form {
+  &__input {
+    padding: 10px;
+    border: solid 1px $table-border;
+  }
+  &__counter {
+    font-family: $font-text;
+    color: $text-second;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+    text-align: right;
+    border: none;
+  }
 }
 
 textarea {

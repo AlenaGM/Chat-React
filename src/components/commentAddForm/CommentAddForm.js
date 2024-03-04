@@ -54,6 +54,7 @@ class CommentAddForm extends Component {
           data-name="author"
           maxLength={35}
           value={author}
+          aria-label="write your user name here"
           onChange={this.onValueChange}
         />
 
@@ -64,6 +65,7 @@ class CommentAddForm extends Component {
           data-name="comment"
           maxLength={1200}
           value={comment}
+          aria-label="write your comment here"
           onChange={this.onValueChange}
         />
 
@@ -71,6 +73,7 @@ class CommentAddForm extends Component {
           type="text"
           className="form__counter "
           value={comment.length + "/1200 "}
+          aria-label="maximum signs counter"
           onChange={this.onValueChange}
         />
 
